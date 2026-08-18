@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Barlow_Condensed } from "next/font/google";
 import "./globals.css";
+import { PageLoader } from "./components/PageLoader";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -25,7 +26,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="de"
       className={`${inter.variable} ${barlowCondensed.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <PageLoader />
+        {children}
+      </body>
     </html>
   );
 }

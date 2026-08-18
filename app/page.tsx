@@ -2,6 +2,8 @@ import Image from "next/image";
 import { LogoMark, LogoWordmark } from "./components/Logo";
 import { FaqSection } from "./components/FaqSection";
 import { ContactForm } from "./components/ContactForm";
+import { Header } from "./components/Header";
+import { PhoneIcon } from "./components/icons";
 
 const PHONE_HREF = "tel:+4991718964200";
 const PHONE_LABEL = "0 91 71 / 89 64 20";
@@ -12,22 +14,6 @@ const h2 =
   "font-display font-bold text-[clamp(28px,3.6vw,42px)] leading-[1.1] tracking-[0.01em]";
 const brassBtn =
   "bg-brass hover:bg-brass-light text-ink font-semibold rounded-md text-center transition-colors";
-
-function PhoneIcon({ size = 16 }: { size?: number }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      width={size}
-      height={size}
-      fill="none"
-      stroke="#C58B3F"
-      strokeWidth="2"
-      aria-hidden="true"
-    >
-      <path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" />
-    </svg>
-  );
-}
 
 const services = [
   {
@@ -171,41 +157,7 @@ const navLinks = [
 export default function Home() {
   return (
     <div className="min-w-[320px]">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-ink px-[clamp(16px,4vw,40px)]">
-        <div className="max-w-[1200px] mx-auto flex items-center gap-4 flex-wrap py-3">
-          <a href="#top" className="flex items-center gap-3">
-            <LogoMark size={38} />
-            <LogoWordmark />
-          </a>
-          <nav className="flex gap-[clamp(12px,2vw,24px)] flex-wrap ml-auto items-center">
-            {navLinks.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                className="font-medium text-sm text-cream hover:text-brass transition-colors"
-              >
-                {l.label}
-              </a>
-            ))}
-          </nav>
-          <div className="flex items-center gap-3.5 ml-auto">
-            <a
-              href={PHONE_HREF}
-              className="flex items-center gap-2 font-semibold text-sm text-cream hover:text-brass transition-colors"
-            >
-              <PhoneIcon />
-              <span>{PHONE_LABEL}</span>
-            </a>
-            <a
-              href="#kontakt"
-              className={`${brassBtn} text-[13px] px-4 py-2.5 whitespace-nowrap`}
-            >
-              Notdienst / Rückruf
-            </a>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero */}
       <section id="top" className="relative bg-ink overflow-hidden">
