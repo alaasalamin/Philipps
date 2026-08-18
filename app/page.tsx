@@ -3,10 +3,11 @@ import { LogoMark, LogoWordmark } from "./components/Logo";
 import { FaqSection } from "./components/FaqSection";
 import { ContactForm } from "./components/ContactForm";
 import { Header } from "./components/Header";
+import { ScrollToTop } from "./components/ScrollToTop";
 import { PhoneIcon } from "./components/icons";
 
-const PHONE_HREF = "tel:+4991718964200";
-const PHONE_LABEL = "0 91 71 / 89 64 20";
+const PHONE_HREF = "tel:+49155223085402";
+const PHONE_LABEL = "01552 / 23 08 54 02";
 
 const sectionPad = "px-[clamp(16px,4vw,40px)] py-[clamp(56px,8vw,100px)]";
 const eyebrow = "font-semibold text-[13px] text-brass tracking-[0.24em]";
@@ -495,16 +496,21 @@ export default function Home() {
                 </span>
                 <span>
                   <span className="block font-semibold text-base">
-                    Industriestraße 12 · 91154 Roth
+                    Auf den Kellern 25 · 91301 Forchheim
                   </span>
                   <span className="block text-[13px] text-steel">
                     Termine nach Vereinbarung
                   </span>
                 </span>
               </div>
-              <div className="photo-placeholder h-[180px] rounded-[10px]">
-                [ karten-einbettung: standort roth ]
-              </div>
+              <iframe
+                src="https://www.google.com/maps?q=Auf%20den%20Kellern%2025%2C%2091301%20Forchheim&output=embed"
+                className="h-[220px] w-full rounded-[10px] border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Standort: Auf den Kellern 25, 91301 Forchheim"
+                allowFullScreen
+              />
             </div>
             <ContactForm />
           </div>
@@ -575,6 +581,7 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      <ScrollToTop />
     </div>
   );
 }

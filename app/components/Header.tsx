@@ -37,11 +37,11 @@ export function Header() {
         </nav>
         <div className="hidden lg:flex items-center gap-3.5 ml-auto">
           <a
-            href="tel:+4991718964200"
+            href="tel:+49155223085402"
             className="flex items-center gap-2 font-semibold text-sm text-cream hover:text-brass transition-colors"
           >
             <PhoneIcon />
-            <span>0 91 71 / 89 64 20</span>
+            <span>01552 / 23 08 54 02</span>
           </a>
           <a
             href="#kontakt"
@@ -53,7 +53,7 @@ export function Header() {
 
         {/* Mobile: phone + burger */}
         <div className="flex lg:hidden items-center gap-4 ml-auto">
-          <a href="tel:+4991718964200" aria-label="Anrufen" className="p-1">
+          <a href="tel:+49155223085402" aria-label="Anrufen" className="p-1">
             <PhoneIcon size={20} />
           </a>
           <button
