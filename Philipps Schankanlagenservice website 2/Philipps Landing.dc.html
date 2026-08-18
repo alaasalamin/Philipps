@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth;}
+body{margin:0;background:#F6F1E8;font-family:Inter,sans-serif;color:#1B1F23;}
+a{color:#C58B3F;text-decoration:none;} a:hover{color:#1B1F23;}
+input,textarea{font-family:Inter,sans-serif;}
+</style>
+</helmet>
+<div style="min-width:320px;">
+<!-- Header -->
+<header data-screen-label="Header" style="position:sticky;top:0;z-index:50;background:#1B1F23;padding:0 clamp(16px,4vw,40px);">
+  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:12px 0;">
+    <a href="#top" style="display:flex;align-items:center;gap:12px;">
+      <svg viewBox="0 0 96 96" width="38" height="38"><path d="M30 84V14h21a17 17 0 0 1 0 34H30" fill="none" stroke="#C58B3F" stroke-width="11" stroke-linejoin="round"></path><path d="M44 51v11" stroke="#C58B3F" stroke-width="11"></path><path d="M44 70c3.5 5 5.5 7.6 5.5 10.4a5.5 5.5 0 1 1-11 0C38.5 77.6 40.5 75 44 70Z" fill="#C58B3F"></path></svg>
+      <span style="display:flex;flex-direction:column;">
+        <span style="font:700 22px/1 'Barlow Condensed',sans-serif;color:#F6F1E8;letter-spacing:0.04em;">PHILIPPS</span>
+        <span style="font:600 7px Inter,sans-serif;color:#C58B3F;letter-spacing:0.28em;">SCHANKANLAGENSERVICE</span>
+      </span>
+    </a>
+    <nav style="display:flex;gap:clamp(12px,2vw,24px);flex-wrap:wrap;margin-left:auto;align-items:center;">
+      <a href="#leistungen" style="font:500 14px Inter;color:#F6F1E8;" style-hover="color:#C58B3F;">Leistungen</a>
+      <a href="#verleih" style="font:500 14px Inter;color:#F6F1E8;" style-hover="color:#C58B3F;">Verleih &amp; Festbedarf</a>
+      <a href="#ueberuns" style="font:500 14px Inter;color:#F6F1E8;" style-hover="color:#C58B3F;">Über uns</a>
+      <a href="#referenzen" style="font:500 14px Inter;color:#F6F1E8;" style-hover="color:#C58B3F;">Referenzen</a>
+      <a href="#kontakt" style="font:500 14px Inter;color:#F6F1E8;" style-hover="color:#C58B3F;">Kontakt</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:14px;margin-left:auto;">
+      <a href="tel:+4991718964200" style="display:flex;align-items:center;gap:8px;font:600 14px Inter;color:#F6F1E8;" style-hover="color:#C58B3F;">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#C58B3F" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"></path></svg>
+        <span>0 91 71 / 89 64 20</span>
+      </a>
+      <a href="#kontakt" style="background:#C58B3F;color:#1B1F23;font:600 13px Inter;padding:10px 16px;border-radius:6px;white-space:nowrap;" style-hover="background:#D69C50;color:#1B1F23;">Notdienst / Rückruf</a>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section id="top" data-screen-label="Hero" style="position:relative;background:#1B1F23;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:repeating-linear-gradient(115deg,#242a30 0 22px,#20262b 22px 44px);"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(27,31,35,0.96) 30%,rgba(27,31,35,0.55));"></div>
+  <div style="position:absolute;right:24px;bottom:80px;font:400 11px monospace;color:#5C6670;">[ foto: techniker an der zapfanlage ]</div>
+  <div style="position:relative;max-width:1200px;margin:0 auto;padding:clamp(64px,10vw,130px) clamp(16px,4vw,40px) clamp(48px,7vw,90px);">
+    <div style="font:600 13px Inter;color:#C58B3F;letter-spacing:0.24em;margin-bottom:18px;">MEISTERBETRIEB · FRANKEN</div>
+    <h1 style="margin:0;max-width:820px;font:700 clamp(34px,5.5vw,60px)/1.05 'Barlow Condensed',sans-serif;color:#F6F1E8;letter-spacing:0.01em;text-wrap:pretty;">Schankanlagen-Service, Wartung &amp; DGUV-Prüfung für Gastronomie und Feste in Franken</h1>
+    <p style="max-width:560px;font:400 clamp(15px,1.6vw,18px)/1.6 Inter;color:#B8BCC0;margin:20px 0 32px;">Vom Zapfhahn bis zur wiederkehrenden Prüfung nach DGUV Grundsatz 310-008 – wir halten Ihre Schankanlage sauber, sicher und einsatzbereit. Rund um die Uhr.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;">
+      <a href="#kontakt" style="background:#C58B3F;color:#1B1F23;font:600 16px Inter;padding:15px 30px;border-radius:6px;" style-hover="background:#D69C50;color:#1B1F23;">Jetzt anfragen</a>
+      <a href="tel:+4991718964200" style="border:2px solid #F6F1E8;color:#F6F1E8;font:600 16px Inter;padding:13px 30px;border-radius:6px;" style-hover="border-color:#C58B3F;color:#C58B3F;">Anrufen</a>
+    </div>
+  </div>
+  <div style="position:relative;border-top:1px solid rgba(246,241,232,0.12);">
+    <div style="max-width:1200px;margin:0 auto;padding:18px clamp(16px,4vw,40px);display:flex;gap:clamp(16px,3vw,40px);flex-wrap:wrap;">
+      <div style="display:flex;align-items:center;gap:10px;font:500 13px Inter;color:#F6F1E8;"><span style="width:7px;height:7px;background:#C58B3F;border-radius:50%;"></span>Über 20 Jahre Erfahrung</div>
+      <div style="display:flex;align-items:center;gap:10px;font:500 13px Inter;color:#F6F1E8;"><span style="width:7px;height:7px;background:#C58B3F;border-radius:50%;"></span>24/7 Notdienst-Bereitschaft</div>
+      <div style="display:flex;align-items:center;gap:10px;font:500 13px Inter;color:#F6F1E8;"><span style="width:7px;height:7px;background:#C58B3F;border-radius:50%;"></span>DGUV 310-008 Prüfung</div>
+      <div style="display:flex;align-items:center;gap:10px;font:500 13px Inter;color:#F6F1E8;"><span style="width:7px;height:7px;background:#C58B3F;border-radius:50%;"></span>Regional in Franken</div>
+    </div>
+  </div>
+</section>
+
+<!-- Leistungen -->
+<section id="leistungen" data-screen-label="Leistungen" style="background:#F6F1E8;padding:clamp(56px,8vw,100px) clamp(16px,4vw,40px);">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="font:600 13px Inter;color:#C58B3F;letter-spacing:0.24em;">LEISTUNGEN</div>
+    <h2 style="margin:10px 0 40px;font:700 clamp(28px,3.6vw,42px)/1.1 'Barlow Condensed',sans-serif;letter-spacing:0.01em;">Alles rund um Ihre Schankanlage</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;">
+      <div style="background:#fff;border-radius:10px;box-shadow:0 4px 20px rgba(27,31,35,0.07);padding:32px 28px;display:flex;flex-direction:column;gap:14px;">
+        <svg viewBox="0 0 32 32" width="34" height="34" fill="none" stroke="#C58B3F" stroke-width="2"><circle cx="16" cy="16" r="6"></circle><path d="M16 2v6M16 24v6M2 16h6M24 16h6"></path></svg>
+        <h3 style="margin:0;font:700 24px 'Barlow Condensed',sans-serif;">Schankanlagenservice</h3>
+        <p style="margin:0;font:400 15px/1.6 Inter;color:#5C6670;flex:1;">Wartung, Reinigung und Reparatur Ihrer Schankanlage – inklusive wiederkehrender Prüfung nach DGUV Grundsatz 310-008. Erfahrenes Technikerteam, 24/7 Notdienst.</p>
+        <a href="#kontakt" style="font:600 14px Inter;color:#C58B3F;" style-hover="color:#1B1F23;">Mehr erfahren →</a>
+        <a href="#kontakt" style="background:#C58B3F;color:#1B1F23;font:600 14px Inter;padding:12px 20px;border-radius:6px;text-align:center;" style-hover="background:#D69C50;color:#1B1F23;">Service anfragen</a>
+      </div>
+      <div style="background:#fff;border-radius:10px;box-shadow:0 4px 20px rgba(27,31,35,0.07);padding:32px 28px;display:flex;flex-direction:column;gap:14px;">
+        <svg viewBox="0 0 32 32" width="34" height="34" fill="none" stroke="#C58B3F" stroke-width="2"><rect x="3" y="8" width="20" height="13" rx="2"></rect><circle cx="11" cy="25" r="3"></circle><path d="M23 15h6"></path></svg>
+        <h3 style="margin:0;font:700 24px 'Barlow Condensed',sans-serif;">Schank- &amp; Kühlwagenverleih</h3>
+        <p style="margin:0;font:400 15px/1.6 Inter;color:#5C6670;flex:1;">Moderne Kühlanhänger und Ausschankwagen für Events jeder Größe – von der Privatfeier bis zur Großveranstaltung. Inklusive persönlicher Beratung.</p>
+        <a href="#verleih" style="font:600 14px Inter;color:#C58B3F;" style-hover="color:#1B1F23;">Mehr erfahren →</a>
+        <a href="#kontakt" style="background:#C58B3F;color:#1B1F23;font:600 14px Inter;padding:12px 20px;border-radius:6px;text-align:center;" style-hover="background:#D69C50;color:#1B1F23;">Verleih anfragen</a>
+      </div>
+      <div style="background:#fff;border-radius:10px;box-shadow:0 4px 20px rgba(27,31,35,0.07);padding:32px 28px;display:flex;flex-direction:column;gap:14px;">
+        <svg viewBox="0 0 32 32" width="34" height="34" fill="none" stroke="#C58B3F" stroke-width="2"><path d="M16 4 3 26h26z"></path><path d="M16 4v22"></path></svg>
+        <h3 style="margin:0;font:700 24px 'Barlow Condensed',sans-serif;">Festbedarf</h3>
+        <p style="margin:0;font:400 15px/1.6 Inter;color:#5C6670;flex:1;">Full-Service für den Getränkeausschank auf Festen: Planung, Bedarfsermittlung und Vermietung – vom Durchlaufkühler bis zur Krugspülmaschine.</p>
+        <a href="#verleih" style="font:600 14px Inter;color:#C58B3F;" style-hover="color:#1B1F23;">Mehr erfahren →</a>
+        <a href="#kontakt" style="background:#C58B3F;color:#1B1F23;font:600 14px Inter;padding:12px 20px;border-radius:6px;text-align:center;" style-hover="background:#D69C50;color:#1B1F23;">Fest planen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Verleih & Festbedarf -->
+<section id="verleih" data-screen-label="Verleih" style="background:#fff;padding:clamp(56px,8vw,100px) clamp(16px,4vw,40px);">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="font:600 13px Inter;color:#C58B3F;letter-spacing:0.24em;">VERLEIH &amp; FESTBEDARF</div>
+    <h2 style="margin:10px 0 12px;font:700 clamp(28px,3.6vw,42px)/1.1 'Barlow Condensed',sans-serif;">Mietgeräte für Ihr Fest</h2>
+    <p style="margin:0 0 40px;max-width:560px;font:400 16px/1.6 Inter;color:#5C6670;">Gepflegte Technik, geprüft und einsatzbereit. Lieferung, Aufbau und Einweisung auf Wunsch inklusive.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;">
+      <sc-for list="{{ rentals }}" as="r" hint-placeholder-count="5">
+        <div style="background:#F6F1E8;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="height:150px;background:repeating-linear-gradient(45deg,#EAE3D5 0 14px,#E2DACA 14px 28px);display:flex;align-items:center;justify-content:center;font:400 11px monospace;color:#8A8071;">{{ r.photo }}</div>
+          <div style="padding:20px;display:flex;flex-direction:column;gap:8px;flex:1;">
+            <div style="font:700 20px 'Barlow Condensed',sans-serif;color:#1B1F23;">{{ r.name }}</div>
+            <div style="font:400 13px/1.5 Inter;color:#5C6670;flex:1;">{{ r.spec }}</div>
+            <a href="#kontakt" style="background:#C58B3F;color:#1B1F23;font:600 13px Inter;padding:10px 16px;border-radius:6px;text-align:center;" style-hover="background:#D69C50;color:#1B1F23;">Anfragen</a>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- Ablauf -->
+<section data-screen-label="Ablauf" style="background:#1B1F23;padding:clamp(56px,8vw,100px) clamp(16px,4vw,40px);">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="font:600 13px Inter;color:#C58B3F;letter-spacing:0.24em;">SO LÄUFT'S AB</div>
+    <h2 style="margin:10px 0 40px;font:700 clamp(28px,3.6vw,42px)/1.1 'Barlow Condensed',sans-serif;color:#F6F1E8;">In drei Schritten zum Service</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px;">
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div style="width:52px;height:52px;border-radius:50%;background:#C58B3F;display:flex;align-items:center;justify-content:center;font:700 24px 'Barlow Condensed',sans-serif;color:#1B1F23;">1</div>
+        <div style="font:700 22px 'Barlow Condensed',sans-serif;color:#F6F1E8;">Anfrage</div>
+        <p style="margin:0;font:400 14px/1.6 Inter;color:#B8BCC0;">Kurz anrufen oder das Formular ausfüllen – wir melden uns noch am selben Werktag zurück.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div style="width:52px;height:52px;border-radius:50%;background:#C58B3F;display:flex;align-items:center;justify-content:center;font:700 24px 'Barlow Condensed',sans-serif;color:#1B1F23;">2</div>
+        <div style="font:700 22px 'Barlow Condensed',sans-serif;color:#F6F1E8;">Termin &amp; Beratung</div>
+        <p style="margin:0;font:400 14px/1.6 Inter;color:#B8BCC0;">Wir klären Bedarf, Umfang und Termin – ehrlich, verbindlich und ohne versteckte Kosten.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div style="width:52px;height:52px;border-radius:50%;background:#C58B3F;display:flex;align-items:center;justify-content:center;font:700 24px 'Barlow Condensed',sans-serif;color:#1B1F23;">3</div>
+        <div style="font:700 22px 'Barlow Condensed',sans-serif;color:#F6F1E8;">Service vor Ort</div>
+        <p style="margin:0;font:400 14px/1.6 Inter;color:#B8BCC0;">Unser Technikerteam kommt zu Ihnen – Wartung, Prüfung oder Aufbau, sauber dokumentiert.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Über uns -->
+<section id="ueberuns" data-screen-label="Über uns" style="background:#F6F1E8;padding:clamp(56px,8vw,100px) clamp(16px,4vw,40px);">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px;align-items:center;">
+    <div style="height:clamp(260px,32vw,400px);border-radius:10px;background:repeating-linear-gradient(45deg,#EAE3D5 0 16px,#E2DACA 16px 32px);display:flex;align-items:center;justify-content:center;font:400 12px monospace;color:#8A8071;">[ foto: inhaber &amp; team vor dem servicefahrzeug ]</div>
+    <div style="display:flex;flex-direction:column;gap:18px;">
+      <div style="font:600 13px Inter;color:#C58B3F;letter-spacing:0.24em;">ÜBER UNS</div>
+      <h2 style="margin:0;font:700 clamp(28px,3.6vw,42px)/1.1 'Barlow Condensed',sans-serif;">Handwerk aus Franken – für Franken</h2>
+      <p style="margin:0;font:400 16px/1.7 Inter;color:#5C6670;">Philipps Schankanlagenservice ist ein familiengeführter Handwerksbetrieb aus dem Nürnberger Land. Was mit Wartung für örtliche Wirtshäuser begann, ist heute ein voll ausgestatteter Service für Gastronomie, Vereine, Brauereien und Festveranstalter in ganz Franken.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;margin-top:6px;">
+        <div style="background:#fff;border-radius:10px;padding:18px;box-shadow:0 4px 20px rgba(27,31,35,0.06);"><div style="font:700 19px 'Barlow Condensed',sans-serif;">Zuverlässigkeit</div><div style="font:400 13px/1.5 Inter;color:#5C6670;margin-top:4px;">Termine, die halten. Anlagen, die laufen.</div></div>
+        <div style="background:#fff;border-radius:10px;padding:18px;box-shadow:0 4px 20px rgba(27,31,35,0.06);"><div style="font:700 19px 'Barlow Condensed',sans-serif;">Erfahrung</div><div style="font:400 13px/1.5 Inter;color:#5C6670;margin-top:4px;">Über 20 Jahre an Zapfanlagen jeder Bauart.</div></div>
+        <div style="background:#fff;border-radius:10px;padding:18px;box-shadow:0 4px 20px rgba(27,31,35,0.06);"><div style="font:700 19px 'Barlow Condensed',sans-serif;">Nähe</div><div style="font:400 13px/1.5 Inter;color:#5C6670;margin-top:4px;">Kurze Wege, schnelle Hilfe, ein fester Ansprechpartner.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Referenzen -->
+<section id="referenzen" data-screen-label="Referenzen" style="background:#fff;padding:clamp(56px,8vw,100px) clamp(16px,4vw,40px);">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="font:600 13px Inter;color:#C58B3F;letter-spacing:0.24em;">REFERENZEN</div>
+    <h2 style="margin:10px 0 40px;font:700 clamp(28px,3.6vw,42px)/1.1 'Barlow Condensed',sans-serif;">Das sagen Wirte &amp; Vereine</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
+      <div style="background:#F6F1E8;border-radius:10px;padding:28px;display:flex;flex-direction:column;gap:14px;">
+        <div style="font:700 34px/0.5 'Barlow Condensed',serif;color:#C58B3F;">„</div>
+        <p style="margin:0;font:400 15px/1.6 Inter;flex:1;">Seit Jahren zuverlässig – die DGUV-Prüfung läuft bei uns wie am Schnürchen, und im Notfall ist immer jemand erreichbar.</p>
+        <div><div style="font:600 14px Inter;">Gasthof Zur Linde</div><div style="font:400 13px Inter;color:#5C6670;">Wirtshaus, Landkreis Roth</div></div>
+      </div>
+      <div style="background:#F6F1E8;border-radius:10px;padding:28px;display:flex;flex-direction:column;gap:14px;">
+        <div style="font:700 34px/0.5 'Barlow Condensed',serif;color:#C58B3F;">„</div>
+        <p style="margin:0;font:400 15px/1.6 Inter;flex:1;">Kühlanhänger und Ausschankwagen fürs Vereinsfest – geliefert, aufgebaut, eingewiesen. Besser geht's nicht.</p>
+        <div><div style="font:600 14px Inter;">SV Frankenblick e. V.</div><div style="font:400 13px Inter;color:#5C6670;">Sportverein, Fränkische Schweiz</div></div>
+      </div>
+      <div style="background:#F6F1E8;border-radius:10px;padding:28px;display:flex;flex-direction:column;gap:14px;">
+        <div style="font:700 34px/0.5 'Barlow Condensed',serif;color:#C58B3F;">„</div>
+        <p style="margin:0;font:400 15px/1.6 Inter;flex:1;">Beim Stadtfest mit 8 Zapfstellen lief alles störungsfrei – Planung und Bedarfsermittlung haben exakt gepasst.</p>
+        <div><div style="font:600 14px Inter;">Festkomitee Altstadtfest</div><div style="font:400 13px Inter;color:#5C6670;">Großveranstaltung, Mittelfranken</div></div>
+      </div>
+    </div>
+    <div style="margin-top:48px;display:flex;gap:clamp(24px,4vw,56px);flex-wrap:wrap;align-items:center;justify-content:center;opacity:0.55;">
+      <span style="font:700 20px 'Barlow Condensed',sans-serif;letter-spacing:0.1em;color:#5C6670;">BRAUEREI SCHWANENBRÄU</span>
+      <span style="font:700 20px 'Barlow Condensed',sans-serif;letter-spacing:0.1em;color:#5C6670;">FELSENKELLER BRÄU</span>
+      <span style="font:700 20px 'Barlow Condensed',sans-serif;letter-spacing:0.1em;color:#5C6670;">ALTSTADTFEST</span>
+      <span style="font:700 20px 'Barlow Condensed',sans-serif;letter-spacing:0.1em;color:#5C6670;">KIRCHWEIH GVSD</span>
+    </div>
+  </div>
+</section>
+
+<!-- Servicegebiet -->
+<section data-screen-label="Servicegebiet" style="background:#F6F1E8;padding:clamp(56px,8vw,100px) clamp(16px,4vw,40px);">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px;align-items:center;">
+    <div style="display:flex;flex-direction:column;gap:18px;">
+      <div style="font:600 13px Inter;color:#C58B3F;letter-spacing:0.24em;">SERVICEGEBIET</div>
+      <h2 style="margin:0;font:700 clamp(28px,3.6vw,42px)/1.1 'Barlow Condensed',sans-serif;">In ganz Franken für Sie unterwegs</h2>
+      <p style="margin:0;font:400 16px/1.7 Inter;color:#5C6670;">Unser Kerngebiet liegt im Umkreis von rund 80 km um Roth – für Wartungsverträge und Festbedarf fahren wir gerne auch weiter.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <span style="background:#fff;border-radius:999px;padding:8px 16px;font:500 13px Inter;color:#1B1F23;box-shadow:0 2px 10px rgba(27,31,35,0.06);">Nürnberg</span>
+        <span style="background:#fff;border-radius:999px;padding:8px 16px;font:500 13px Inter;color:#1B1F23;box-shadow:0 2px 10px rgba(27,31,35,0.06);">Fürth</span>
+        <span style="background:#fff;border-radius:999px;padding:8px 16px;font:500 13px Inter;color:#1B1F23;box-shadow:0 2px 10px rgba(27,31,35,0.06);">Erlangen</span>
+        <span style="background:#fff;border-radius:999px;padding:8px 16px;font:500 13px Inter;color:#1B1F23;box-shadow:0 2px 10px rgba(27,31,35,0.06);">Ansbach</span>
+        <span style="background:#fff;border-radius:999px;padding:8px 16px;font:500 13px Inter;color:#1B1F23;box-shadow:0 2px 10px rgba(27,31,35,0.06);">Bamberg</span>
+        <span style="background:#fff;border-radius:999px;padding:8px 16px;font:500 13px Inter;color:#1B1F23;box-shadow:0 2px 10px rgba(27,31,35,0.06);">Bayreuth</span>
+        <span style="background:#fff;border-radius:999px;padding:8px 16px;font:500 13px Inter;color:#1B1F23;box-shadow:0 2px 10px rgba(27,31,35,0.06);">Regensburg</span>
+        <span style="background:#fff;border-radius:999px;padding:8px 16px;font:500 13px Inter;color:#1B1F23;box-shadow:0 2px 10px rgba(27,31,35,0.06);">Ingolstadt</span>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;">
+      <div style="position:relative;width:min(380px,80vw);aspect-ratio:1;">
+        <div style="position:absolute;inset:0;border:2px dashed #C58B3F;border-radius:50%;opacity:0.5;"></div>
+        <div style="position:absolute;inset:18%;border:2px dashed #C58B3F;border-radius:50%;opacity:0.75;"></div>
+        <div style="position:absolute;inset:36%;border:2px solid #C58B3F;border-radius:50%;background:rgba(197,139,63,0.08);"></div>
+        <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:6px;">
+          <svg viewBox="0 0 96 96" width="34" height="34"><path d="M30 84V14h21a17 17 0 0 1 0 34H30" fill="none" stroke="#C58B3F" stroke-width="11" stroke-linejoin="round"></path><path d="M44 51v11" stroke="#C58B3F" stroke-width="11"></path><path d="M44 70c3.5 5 5.5 7.6 5.5 10.4a5.5 5.5 0 1 1-11 0C38.5 77.6 40.5 75 44 70Z" fill="#C58B3F"></path></svg>
+          <span style="font:700 16px 'Barlow Condensed',sans-serif;color:#1B1F23;">ROTH</span>
+        </div>
+        <span style="position:absolute;right:4%;top:14%;font:500 11px Inter;color:#5C6670;">~80 km</span>
+        <span style="position:absolute;right:22%;top:30%;font:500 11px Inter;color:#5C6670;">~40 km</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section data-screen-label="FAQ" style="background:#fff;padding:clamp(56px,8vw,100px) clamp(16px,4vw,40px);">
+  <div style="max-width:820px;margin:0 auto;">
+    <div style="font:600 13px Inter;color:#C58B3F;letter-spacing:0.24em;">HÄUFIGE FRAGEN</div>
+    <h2 style="margin:10px 0 32px;font:700 clamp(28px,3.6vw,42px)/1.1 'Barlow Condensed',sans-serif;">Gut zu wissen</h2>
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="5">
+        <div style="background:#F6F1E8;border-radius:10px;overflow:hidden;">
+          <button onClick="{{ f.toggle }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;background:none;border:none;padding:18px 22px;cursor:pointer;text-align:left;font:600 16px Inter;color:#1B1F23;">
+            <span>{{ f.q }}</span>
+            <span style="font:600 20px Inter;color:#C58B3F;flex-shrink:0;">{{ f.symbol }}</span>
+          </button>
+          <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+            <div style="padding:0 22px 20px;font:400 15px/1.6 Inter;color:#5C6670;">{{ f.a }}</div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- Kontakt -->
+<section id="kontakt" data-screen-label="Kontakt" style="background:#F6F1E8;padding:clamp(56px,8vw,100px) clamp(16px,4vw,40px);">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="font:600 13px Inter;color:#C58B3F;letter-spacing:0.24em;">KONTAKT</div>
+    <h2 style="margin:10px 0 40px;font:700 clamp(28px,3.6vw,42px)/1.1 'Barlow Condensed',sans-serif;">Anfrage stellen – wir melden uns</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;">
+      <div style="display:flex;flex-direction:column;gap:22px;">
+        <a href="tel:+4991718964200" style="display:flex;align-items:center;gap:14px;color:#1B1F23;" style-hover="color:#C58B3F;">
+          <span style="width:44px;height:44px;border-radius:10px;background:#1B1F23;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#C58B3F" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"></path></svg></span>
+          <span><span style="display:block;font:600 16px Inter;">0 91 71 / 89 64 20</span><span style="display:block;font:400 13px Inter;color:#5C6670;">24/7 Notdienst</span></span>
+        </a>
+        <a href="mailto:info@philipps-schankservice.de" style="display:flex;align-items:center;gap:14px;color:#1B1F23;" style-hover="color:#C58B3F;">
+          <span style="width:44px;height:44px;border-radius:10px;background:#1B1F23;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#C58B3F" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg></span>
+          <span><span style="display:block;font:600 16px Inter;">info@philipps-schankservice.de</span><span style="display:block;font:400 13px Inter;color:#5C6670;">Antwort am selben Werktag</span></span>
+        </a>
+        <div style="display:flex;align-items:center;gap:14px;">
+          <span style="width:44px;height:44px;border-radius:10px;background:#1B1F23;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#C58B3F" stroke-width="2"><circle cx="12" cy="10" r="3"></circle><path d="M12 2a8 8 0 0 1 8 8c0 5-8 12-8 12S4 15 4 10a8 8 0 0 1 8-8z"></path></svg></span>
+          <span><span style="display:block;font:600 16px Inter;">Industriestraße 12 · 91154 Roth</span><span style="display:block;font:400 13px Inter;color:#5C6670;">Termine nach Vereinbarung</span></span>
+        </div>
+        <div style="height:180px;border-radius:10px;background:repeating-linear-gradient(45deg,#EAE3D5 0 14px,#E2DACA 14px 28px);display:flex;align-items:center;justify-content:center;font:400 11px monospace;color:#8A8071;">[ karten-einbettung: standort roth ]</div>
+      </div>
+      <form onSubmit="{{ handleSubmit }}" style="background:#fff;border-radius:10px;box-shadow:0 4px 24px rgba(27,31,35,0.08);padding:32px;display:flex;flex-direction:column;gap:16px;">
+        <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+          <div style="background:#F6F1E8;border-radius:8px;padding:16px;font:500 15px Inter;color:#1B1F23;">Danke für Ihre Anfrage! Wir melden uns schnellstmöglich – im Notfall rufen Sie bitte direkt an.</div>
+        </sc-if>
+        <label style="display:flex;flex-direction:column;gap:6px;font:600 13px Inter;">Name<input name="name" required style="border:1px solid #D8D2C4;border-radius:6px;padding:12px 14px;font:400 15px Inter;" placeholder="Max Mustermann"></label>
+        <label style="display:flex;flex-direction:column;gap:6px;font:600 13px Inter;">Betrieb / Verein<input name="betrieb" style="border:1px solid #D8D2C4;border-radius:6px;padding:12px 14px;font:400 15px Inter;" placeholder="Gasthof, Verein, Brauerei …"></label>
+        <label style="display:flex;flex-direction:column;gap:6px;font:600 13px Inter;">Telefon<input name="telefon" type="tel" required style="border:1px solid #D8D2C4;border-radius:6px;padding:12px 14px;font:400 15px Inter;" placeholder="Für den Rückruf"></label>
+        <label style="display:flex;flex-direction:column;gap:6px;font:600 13px Inter;">Anliegen<select name="anliegen" style="border:1px solid #D8D2C4;border-radius:6px;padding:12px 14px;font:400 15px Inter;background:#fff;"><option>Wartung / DGUV-Prüfung</option><option>Reparatur / Notdienst</option><option>Verleih Kühlanhänger / Ausschankwagen</option><option>Festbedarf / Planung</option><option>Sonstiges</option></select></label>
+        <label style="display:flex;flex-direction:column;gap:6px;font:600 13px Inter;">Nachricht<textarea name="nachricht" rows="4" style="border:1px solid #D8D2C4;border-radius:6px;padding:12px 14px;font:400 15px Inter;resize:vertical;" placeholder="Kurz Ihr Anliegen – z. B. Anlage, Termin, Festgröße"></textarea></label>
+        <button type="submit" style="background:#C58B3F;color:#1B1F23;font:600 16px Inter;padding:15px;border:none;border-radius:6px;cursor:pointer;" style-hover="background:#D69C50;">Anfrage absenden</button>
+        <div style="font:400 12px/1.5 Inter;color:#5C6670;">Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Daten zur Bearbeitung der Anfrage zu.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer data-screen-label="Footer" style="background:#1B1F23;padding:clamp(40px,6vw,64px) clamp(16px,4vw,40px) 28px;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:40px;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:36px;">
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div style="display:flex;align-items:center;gap:12px;">
+          <svg viewBox="0 0 96 96" width="40" height="40"><path d="M30 84V14h21a17 17 0 0 1 0 34H30" fill="none" stroke="#C58B3F" stroke-width="11" stroke-linejoin="round"></path><path d="M44 51v11" stroke="#C58B3F" stroke-width="11"></path><path d="M44 70c3.5 5 5.5 7.6 5.5 10.4a5.5 5.5 0 1 1-11 0C38.5 77.6 40.5 75 44 70Z" fill="#C58B3F"></path></svg>
+          <span style="display:flex;flex-direction:column;"><span style="font:700 24px/1 'Barlow Condensed',sans-serif;color:#F6F1E8;letter-spacing:0.04em;">PHILIPPS</span><span style="font:600 7.5px Inter;color:#C58B3F;letter-spacing:0.28em;">SCHANKANLAGENSERVICE</span></span>
+        </div>
+        <p style="margin:0;font:400 13px/1.6 Inter;color:#8A9096;">Service · Wartung · Verleih<br>Ihr Schankanlagen-Partner in Franken.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="font:600 12px Inter;color:#C58B3F;letter-spacing:0.2em;">NAVIGATION</div>
+        <a href="#leistungen" style="font:400 14px Inter;color:#B8BCC0;" style-hover="color:#C58B3F;">Leistungen</a>
+        <a href="#verleih" style="font:400 14px Inter;color:#B8BCC0;" style-hover="color:#C58B3F;">Verleih &amp; Festbedarf</a>
+        <a href="#ueberuns" style="font:400 14px Inter;color:#B8BCC0;" style-hover="color:#C58B3F;">Über uns</a>
+        <a href="#referenzen" style="font:400 14px Inter;color:#B8BCC0;" style-hover="color:#C58B3F;">Referenzen</a>
+        <a href="#kontakt" style="font:400 14px Inter;color:#B8BCC0;" style-hover="color:#C58B3F;">Kontakt</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="font:600 12px Inter;color:#C58B3F;letter-spacing:0.2em;">ERREICHBARKEIT</div>
+        <div style="font:400 14px/1.7 Inter;color:#B8BCC0;">Mo–Fr 7:30–17:00 Uhr<br>Sa nach Vereinbarung<br><span style="color:#F6F1E8;font-weight:600;">Notdienst: 24/7</span></div>
+        <a href="tel:+4991718964200" style="font:600 15px Inter;color:#C58B3F;" style-hover="color:#F6F1E8;">0 91 71 / 89 64 20</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="font:600 12px Inter;color:#C58B3F;letter-spacing:0.2em;">RECHTLICHES</div>
+        <a href="#" style="font:400 14px Inter;color:#B8BCC0;" style-hover="color:#C58B3F;">Impressum</a>
+        <a href="#" style="font:400 14px Inter;color:#B8BCC0;" style-hover="color:#C58B3F;">Datenschutz</a>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(246,241,232,0.12);padding-top:20px;font:400 13px Inter;color:#8A9096;">© 2026 Philipps Schankanlagenservice · Alle Rechte vorbehalten</div>
+  </div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { open: 0, sent: false };
+  faqData = [
+    { q: "Wie oft muss meine Schankanlage geprüft werden?", a: "Die wiederkehrende Prüfung nach DGUV Grundsatz 310-008 ist in der Regel alle zwei Jahre fällig. Wir erinnern Sie rechtzeitig und übernehmen Prüfung samt Dokumentation." },
+    { q: "Was kostet eine Wartung?", a: "Das hängt von Anlagengröße und Zustand ab. Nach einem kurzen Telefonat nennen wir Ihnen einen verbindlichen Festpreis – ohne versteckte Kosten. Wartungsverträge gibt es zu vergünstigten Konditionen." },
+    { q: "Wie schnell sind Sie im Notfall da?", a: "Unser Notdienst ist rund um die Uhr erreichbar. Im Kerngebiet um Roth sind wir in der Regel innerhalb weniger Stunden vor Ort – am Wochenende und an Feiertagen ebenso." },
+    { q: "Wie lange kann ich Kühlanhänger & Co. mieten?", a: "Vom Wochenende bis zur mehrwöchigen Festsaison – die Mietdauer richtet sich nach Ihrem Event. Bei Großveranstaltungen reservieren Sie am besten 4–8 Wochen im Voraus." },
+    { q: "Übernehmen Sie Lieferung und Aufbau?", a: "Ja. Auf Wunsch liefern wir, bauen auf, schließen an und weisen Ihr Personal ein. Nach dem Fest holen wir alles wieder ab und übernehmen die Reinigung." }
+  ];
+  renderVals() {
+    return {
+      sent: this.state.sent,
+      handleSubmit: (e) => { e.preventDefault(); this.setState({ sent: true }); },
+      faqs: this.faqData.map((f, i) => ({
+        q: f.q, a: f.a,
+        open: this.state.open === i,
+        symbol: this.state.open === i ? "−" : "+",
+        toggle: () => this.setState(s => ({ open: s.open === i ? -1 : i }))
+      })),
+      rentals: [
+        { name: "Kühlanhänger", spec: "Bis 8 m³ Kühlvolumen · 2–8 °C · 230 V", photo: "[ foto: kühlanhänger ]" },
+        { name: "Durchlaufkühler", spec: "50–200 L/h · 1–4 Leitungen · steckerfertig", photo: "[ foto: durchlaufkühler ]" },
+        { name: "Ausschankwagen", spec: "2–6 Zapfstellen · Theke & Kühlung integriert", photo: "[ foto: ausschankwagen ]" },
+        { name: "Bierzeltgarnituren", spec: "Tisch + 2 Bänke · stapelbar · ab 10 Stück", photo: "[ foto: bierzeltgarnitur ]" },
+        { name: "Krugspülmaschine", spec: "Bis 500 Krüge/h · Anschluss 400 V", photo: "[ foto: krugspülmaschine ]" }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
